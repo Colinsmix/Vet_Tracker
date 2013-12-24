@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :breed do
+    name 'ExampleName'
+    type_id 3
   end
 end
