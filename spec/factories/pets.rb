@@ -2,5 +2,8 @@
 
 FactoryGirl.define do
   factory :pet do
+    name 'ExampleName'
+    type_id 2
+    user_id 2
   end
 end
