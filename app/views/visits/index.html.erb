@@ -1,0 +1,19 @@
+<h1> Visits for <%= "#{@pet.name}" %> </h1>
+
+<table id="visits">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Appointment Date</th>
+  </tr>
+</thead>
+<tbody>
+  <% @visits.each do |visit| %>
+    <tr>
+      <td><%= visit.name %></td>
+      <td><%= visit.appointment %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+

@@ -2,10 +2,11 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-gem 'acts-as-taggable-on'
 gem 'devise'
-gem 'acts_as_votable', '~> 0.8.0'
 gem 'simple_form'
+gem 'ransack'
+gem 'will_paginate', '~> 3.0'
+
 
 
 # Use postgresql as the database for Active Record
@@ -39,11 +40,25 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'valid_attribute'
-  gem 'shoulda-matchers'
   gem 'pry-rails'
+  gem 'quiet_assets'
+  gem 'dotenv-rails'
+  gem 'mailcatcher'
+  gem 'poltergeist'
+  gem "rails-erd"
+  
+end
+
+group :test do
+  gem 'capybara'    
+  gem 'shoulda-matchers'
+  gem 'valid_attribute'
+  gem 'email_spec'
+  gem 'launchy'
+end
+
+group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'

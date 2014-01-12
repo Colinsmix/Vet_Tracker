@@ -1,0 +1,13 @@
+<h1> New Pet </h1>
+
+<%= simple_form_for @pet do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, :autofocus => true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Create Pet" %>
+  </div>
+<% end %>

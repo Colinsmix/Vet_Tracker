@@ -1,0 +1,45 @@
+<h1> Your Pets </h1>
+
+<table id="pets">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Visits</th>
+      <th>Add a Visit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td><%= pet.name %></td>
+        <td><%= link_to 'Visits', pet_visits_path(pet) %>
+        <td><%= link_to 'Add a Visit', new_pet_visit_path(pet) %>
+      </tr>
+    <% end %>     
+  </tbody>
+</table>
+<%= link_to 'Add Pet', new_pet_path %>
+
+
+
+
+<table id="upcoming">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Visit</th>
+      <th>Pet Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @upcomingvisits.each do |visit| %>
+      <tr>
+        <td><%= visit.appointment %></td>
+        <td><%= visit.name %></td>
+        <td><%= visit.pet.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
