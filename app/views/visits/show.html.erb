@@ -1,0 +1,5 @@
+<h1> <%= "#{@visit.name}" %> </h1>
+
+<h2> <%= "#{@visit.description}" %></h2>
+
+<%= link_to 'Edit this Visit', edit_pet_visit_path(@visit.pet, @visit) %>

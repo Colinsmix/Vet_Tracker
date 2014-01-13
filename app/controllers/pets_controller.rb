@@ -1,4 +1,5 @@
 class PetsController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
     @pets = Pet.where(user_id: current_user.id)
@@ -13,7 +14,7 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to pets_path, notice: 'Pet Created Successfully'
+      redirect_to root_path, notice: 'Pet Created Successfully'
     else
       render 'new'
     end

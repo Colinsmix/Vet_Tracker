@@ -10,8 +10,8 @@
 <tbody>
   <% @visits.each do |visit| %>
     <tr>
-      <td><%= visit.name %></td>
-      <td><%= visit.appointment %></td>
+    <td><%= link_to "#{visit.name}", pet_visit_path(visit.pet, visit) %></td>
+    <td><%= visit.appointment %></td>
     </tr>
   <% end %>
 </tbody>
