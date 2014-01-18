@@ -6,6 +6,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'ransack'
 gem 'will_paginate', '~> 3.0'
+gem 'pickadate-rails'
+
 
 
 
@@ -47,11 +49,11 @@ group :test, :development do
   gem 'mailcatcher'
   gem 'poltergeist'
   gem "rails-erd"
-  
+
 end
 
 group :test do
-  gem 'capybara'    
+  gem 'capybara'
   gem 'shoulda-matchers'
   gem 'valid_attribute'
   gem 'email_spec'

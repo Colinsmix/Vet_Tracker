@@ -6,10 +6,22 @@
   <div class="form-inputs">
     <%= f.input :name, :autofocus => true %>
     <%= f.input :description %>
-    <%= f.input :appointment %>
+    <%= f.input :appointment, as: :string, input_html: { class: 'datepicker' } %>
+    <%= f.input :appointment, as: :string, input_html: { class: 'timepicker' } %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit, "Create Visit" %>
   </div>
+<% end %>
+
+<% content_for :extra_footer do %>
+
+<script type="text/javascript">
+$(function(){
+  $('.datepicker').pickadate();
+  $('.timepicker').pickatime();
+})
+</script>
+
 <% end %>
