@@ -7,8 +7,9 @@ gem 'simple_form'
 gem 'ransack'
 gem 'will_paginate', '~> 3.0'
 gem 'pickadate-rails'
-
-
+gem 'carrierwave'
+gem "fog", "~> 1.3.1"
+gem "nokogiri", "~> 1.5.0"
 
 
 # Use postgresql as the database for Active Record

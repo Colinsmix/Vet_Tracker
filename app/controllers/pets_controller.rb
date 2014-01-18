@@ -3,7 +3,8 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.where(user_id: current_user.id)
-    @upcomingvisits = current_user.visits.where('appointment > ?',Time.now)
+    @upcomingvisits = current_user.visits.where('appointment > ?',Time.now) if user_signed_in?
+
   end
 
   def new
