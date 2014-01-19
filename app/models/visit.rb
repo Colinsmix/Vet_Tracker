@@ -1,4 +1,7 @@
 class Visit < ActiveRecord::Base
+  extend TimeSplitter::Accessors
+  split_accessor :appointment
+
   mount_uploader :pet_records, PetRecordsUploader
 
   belongs_to :pet

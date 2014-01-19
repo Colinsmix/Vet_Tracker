@@ -12,7 +12,7 @@ class VisitsController < ApplicationController
   def create
     @pet = Pet.find(params[:pet_id])
     @visit = @pet.visits.build(visit_params)
-
+    @visit.appointment = "#{ params[:visit][:appointment_date] }, #{params[:visit][:appointment_time] }"
     if @visit.save
       redirect_to root_path, notice: "Visit Created Successfully!"
     else
