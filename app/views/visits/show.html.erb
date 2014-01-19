@@ -1,5 +1,7 @@
 <h1> <%= "#{@visit.name}" %> </h1>
 
+<p> <%= "Appointment at: #{ @visit.appointment }" %></p>
+
 <p> <%= "Description: #{@visit.description}" %></p>
 
 <p>
@@ -9,5 +11,6 @@
     <%= link_to 'View Records', pet_visit_download_file_path(@visit.pet, @visit) %>
   <% end %>
 </p>
+
 
 <%= link_to 'Edit this Visit', edit_pet_visit_path(@visit.pet, @visit) %>

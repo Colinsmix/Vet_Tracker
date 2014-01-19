@@ -1,7 +1,7 @@
 class VisitsController < ApplicationController
   def index
     @pet = Pet.find(params[:pet_id])
-    @visits = @pet.visits
+    @visits = @pet.visits.order('appointment DESC')
   end
 
   def new
