@@ -1,5 +1,13 @@
 <h1> <%= "#{@visit.name}" %> </h1>
 
-<h2> <%= "#{@visit.description}" %></h2>
+<p> <%= "Description: #{@visit.description}" %></p>
+
+<p>
+  <% if @visit.pet_records.url.nil? %>
+    No Records Exist
+  <% else %>
+    <%= link_to 'View Records', pet_visit_download_file_path(@visit.pet, @visit) %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit this Visit', edit_pet_visit_path(@visit.pet, @visit) %>

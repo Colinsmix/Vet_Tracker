@@ -1,9 +1,12 @@
 VetTracker::Application.routes.draw do
   devise_for :users
   resources :welcome
-  resources :pets do 
-    resources :visits
+  resources :pets do
+    resources :visits do
+      get 'download_file'
+    end
   end
+
 
   root 'pets#index'
   # The priority is based upon order of creation: first created -> highest priority.

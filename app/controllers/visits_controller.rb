@@ -40,6 +40,12 @@ class VisitsController < ApplicationController
     @visit = @pet.visits.find(params[:id])
   end
 
+  def download_file
+    @pet = Pet.find(params[:pet_id])
+    @visit = @pet.visits.find(params[:visit_id])
+    redirect_to @visit.pet_records.url
+  end
+
   private
 
   def visit_params
