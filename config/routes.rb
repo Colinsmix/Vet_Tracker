@@ -1,5 +1,6 @@
 VetTracker::Application.routes.draw do
   devise_for :users
+  resources :about
   resources :welcome
   resources :pets do
     resources :visits do

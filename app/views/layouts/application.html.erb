@@ -39,8 +39,10 @@
       <li class="active"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
       <% end %>
     </ul>
+
     <!-- Left Nav Section -->
     <ul class="left">
+      <li class="active"><%= link_to 'About Us', about_index_path %></li>
       <% if user_signed_in? %>
       <li class="active"><%= link_to 'View Appointments', pets_path %></li>
       <% end %>

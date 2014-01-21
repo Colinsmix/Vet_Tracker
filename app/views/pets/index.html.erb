@@ -15,7 +15,7 @@
           <td><%= link_to 'Visits', pet_visits_path(pet) %>
           <td><%= link_to 'Add a Visit', new_pet_visit_path(pet) %>
         </tr>
-      <% end %>     
+      <% end %>
     </tbody>
   </table>
   <%= link_to 'Add a new Pet!', new_pet_path %>
@@ -34,7 +34,7 @@
     <tbody>
       <% @upcomingvisits.each do |visit| %>
         <tr>
-          <td><%= visit.appointment %></td>
+          <td><%= visit.appointment.to_formatted_s(:long_ordinal) %></td>
           <td><%= link_to "#{visit.name}", pet_visit_path(visit.pet, visit) %></td>
           <td><%= visit.pet.name %></td>
         </tr>
