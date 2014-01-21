@@ -1,16 +1,19 @@
 <h1> Edit Visit </h1>
 
+<h1> <%= "#{@visit.name}" %> </h1>
+
+<p> <%= "Appointment at: #{ @visit.appointment.to_formatted_s(:long_ordinal) }" %></p>
+
+<p> <%= "Description: #{@visit.description}" %></p>
+
 <%= simple_form_for [@pet, @visit] do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name, :autofocus => true %>
-    <%= f.input :description %>
-    <%= f.input :appointment %>
     <%= f.input :pet_records, as: :file %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Create Visit" %>
+    <%= f.button :submit, "Add Records" %>
   </div>
 <% end %>
