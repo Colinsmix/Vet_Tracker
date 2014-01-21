@@ -14,6 +14,7 @@ class VisitsController < ApplicationController
     @visit = @pet.visits.build(visit_params)
     @visit.appointment = "#{ params[:visit][:appointment_date] }, #{params[:visit][:appointment_time] }"
     if @visit.save
+      NotificationsWorker.perform_at(@visit.appointment-1.days, @visit.id, 1)
       redirect_to root_path, notice: "Visit Created Successfully!"
     else
       render 'new'
