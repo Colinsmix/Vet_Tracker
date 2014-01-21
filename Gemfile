@@ -11,6 +11,7 @@ gem 'carrierwave'
 gem "fog", "~> 1.3.1"
 gem "nokogiri", "~> 1.5.0"
 gem "time_splitter"
+gem "clockwork"
 
 
 # Use postgresql as the database for Active Record
