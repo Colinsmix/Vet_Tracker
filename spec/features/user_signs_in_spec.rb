@@ -15,13 +15,13 @@ So that I can see my favorite blogs, vote on blogs, and submit a blog.) do
     scenario 'I see my profile page if signed in on an account without a name' do
       user.save!
       sign_in_as(user)
-      
-      expect(page).to have_content("Signed in successfully.")
+
+      expect(page).to have_content("Your Pets")
     end
   end
 
-  context 'Forgetting your password' do 
-     
+  context 'Forgetting your password' do
+
     scenario "recover password" do
     visit root_path
     click_link 'Sign In'

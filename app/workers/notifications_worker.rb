@@ -6,7 +6,3 @@ class NotificationsWorker
     NotifierMailer.appointment_notification(visit)
   end
 end
-
-
-
-Visit.where("appointment > ? AND confirmation_sent = ?", Time.now-1.days, false)
