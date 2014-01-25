@@ -149,8 +149,6 @@ GEM
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
-    polyamorous (0.6.4)
-      activerecord (>= 3.0)
     polyglot (0.3.3)
     pry (0.9.12.3)
       coderay (~> 1.0)
@@ -191,10 +189,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
-    ransack (1.1.0)
-      actionpack (>= 3.0)
-      activerecord (>= 3.0)
-      polyamorous (~> 0.6.0)
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.0.7)
@@ -308,7 +302,6 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails-erd
   rails_12factor
-  ransack
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc

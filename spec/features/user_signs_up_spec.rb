@@ -17,8 +17,19 @@ So that I can save favorite blogs, and vote on blogs.) do
       fill_in "Password", :with => "passwordtest", :match => :prefer_exact
       fill_in "Password confirmation", :with => "passwordtest", :match => :prefer_exact
       click_button "Sign up"
-      
+
       expect(page).to have_content("Welcome! You have signed up successfully.")
+    end
+
+    scenario 'Will not sign up a user without an email' do
+      visit root_path
+      click_link 'Sign Up'
+      fill_in "Password", :with => "passwordtest", :match => :prefer_exact
+      fill_in "Password confirmation", :with => "passwordtest", :match => :prefer_exact
+      click_button "Sign up"
+
+      expect(page).to have_content("can't be blank")
+      expect(page).to have_content('Sign up')
     end
   end
 end

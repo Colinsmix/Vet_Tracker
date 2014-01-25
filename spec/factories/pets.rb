@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :pet do
     name 'ExampleName'
-    user_id 2
+    user
   end
 end

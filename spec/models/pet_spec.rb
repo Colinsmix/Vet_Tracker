@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Pet do
   it { should belong_to :user }
+  it { should have_many :visits }
 
   it { should validate_presence_of :name }
 

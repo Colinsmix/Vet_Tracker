@@ -20,17 +20,17 @@ So that I can see my favorite blogs, vote on blogs, and submit a blog.) do
     end
   end
 
-  context 'Forgetting your password' do
+  # context 'Forgetting your password' do
 
-    scenario "recover password" do
-    visit root_path
-    click_link 'Sign In'
-    user.save!
-    click_link "Forgot your password?"
-    fill_in "Email", :with => user.email
-    click_button "Send me reset password instructions"
+  #   scenario "recover password" do
+  #   visit root_path
+  #   click_link 'Sign In'
+  #   user.save!
+  #   click_link "Forgot your password?"
+  #   fill_in "Email", :with => user.email
+  #   click_button "Send me reset password instructions"
 
-    unread_emails_for(user.email).should be_present
-    end
-  end
+  #   unread_emails_for(user.email).should be_present
+  #   end
+  # end
 end
