@@ -46,6 +46,13 @@ class VisitsController < ApplicationController
     redirect_to @visit.pet_records.url
   end
 
+  def destroy
+    @pet = Pet.find(params[:pet_id])
+    @visit = @pet.visits.find(params[:id])
+    @visit.destroy
+    redirect_to root_path, notice: "Visit Removed!"
+  end
+
   private
 
   def visit_params

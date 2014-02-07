@@ -12,6 +12,7 @@
     <tr>
     <td><%= link_to "#{visit.name}", pet_visit_path(visit.pet, visit) %></td>
     <td><%= visit.appointment.to_formatted_s(:long_ordinal) %></td>
+    <td><%= link_to 'Destroy Visit', pet_visit_path(visit.pet, visit), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </tbody>
