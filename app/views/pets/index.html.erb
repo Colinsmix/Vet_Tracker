@@ -14,6 +14,8 @@
           <td><%= pet.name %></td>
           <td><%= link_to 'Visits', pet_visits_path(pet) %>
           <td><%= link_to 'Add a Visit', new_pet_visit_path(pet) %>
+          <td><%= link_to 'Remove Pet', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
         </tr>
       <% end %>
     </tbody>

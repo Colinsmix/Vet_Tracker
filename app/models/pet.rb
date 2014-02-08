@@ -1,6 +1,6 @@
 class Pet < ActiveRecord::Base
   belongs_to :user
-  has_many :visits
+  has_many :visits, dependent: :destroy
   accepts_nested_attributes_for :visits
 
 

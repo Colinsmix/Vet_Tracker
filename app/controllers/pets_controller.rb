@@ -21,6 +21,11 @@ class PetsController < ApplicationController
     end
   end
 
+  def destroy
+    @pet = Pet.find(params[:id])
+    @pet.destroy
+    redirect_to root_path, notice: "Pet Removed!"
+  end
 
   private
 
