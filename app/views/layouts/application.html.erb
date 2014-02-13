@@ -54,9 +54,7 @@
         <p><%= "#{msg}" %></p>
       <% end %>
     </div>
-    <div class='row'>
     <%= yield %>
-    </div>
     <%= javascript_include_tag "application" %>
 
     <%= yield :extra_footer %>

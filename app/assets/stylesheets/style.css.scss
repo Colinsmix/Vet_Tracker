@@ -1,3 +1,21 @@
 body {
   background-color:#ADA692;
 }
+
+.textalign{
+  text-align:center;
+  vertical-align:middle;
+}
+
+.petheaderalign{
+  height:126px;
+  vertical-align:middle;
+  h1 {
+    line-height:80px;
+  }
+}
+
+.dogpicture{
+  position:right;
+  margin: 0 auto;
+}
